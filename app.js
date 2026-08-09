@@ -76,9 +76,12 @@ function exportBm(){
 async function init(){
   try {
     const res = await fetch(A('/data/pasal.json'));
+    if (!res.ok) throw new Error(`fetch failed ${res.status}`);
     PASAL = await res.json();
+    console.log('KataPasal: data loaded', PASAL.length, 'pasal');
   } catch(e){
-    qs('#results').innerHTML = '<p class="empty">Gagal memuat data.</p>'; return;
+    console.error('KataPasal init error:', e);
+    qs('#results').innerHTML = '<p class="empty">Gagal memuat data: ' + e.message + '</p>'; return;
   }
   loadBookmarks();
 
@@ -104,7 +107,8 @@ async function init(){
   // SW
   if ('serviceWorker' in navigator) navigator.serviceWorker.register(A('/sw.js')).catch(()=>0);
   render();
+  console.log('KataPasal: init complete');
 }
 document.addEventListener('DOMContentLoaded', init);
-init(); // juga panggil langsung bila DOMContentLoaded sudah lewat (module deferred)
-// ponytail: SSR/IndexedDB bila >5MB. Ini cukup fetch statis + localStorage.
+init();
+window.KP = { init, PASAL: ()=>PASAL, BOOKMARK: ()=>BOOKMARK }; // debug helper
