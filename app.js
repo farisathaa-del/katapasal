@@ -1,7 +1,8 @@
 // KataPasal PWA app — search + bookmark + export
 const CACHE = 'katapasal-v1';
-// ponytail: semua path lewat <base href="/katapasal/"> — relative di subfolder GitHub Pages
-const BASE = document.querySelector('base')?.href || location.origin + '/';
+// ponytail: GitHub Pages subfolder = /katapasal/ — deteksi dari location.pathname
+const SUB = location.pathname.split('/').filter(Boolean)[0] || '';
+const BASE = location.origin + (SUB ? '/' + SUB + '/' : '/');
 const A = (p) => new URL(p, BASE).href; // resolve full URL ke /katapasal/...
 const ASSETS = [A('/'), A('/index.html'), A('/style.css'), A('/app.js'), A('/manifest.json'), A('/icons/icon-192.png'), A('/icons/icon-512.png'), A('/icons/katapasal-logo.png'), A('/data/pasal.json'), A('/sw.js')];
 
