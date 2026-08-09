@@ -10,6 +10,7 @@ const escapeHtml = s => (s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;
 
 function bmKey(e){return `${e.source}:${e.pasal}`;}
 const bStore = ()=>'localStorage' in window ? JSON.parse(localStorage.getItem('b')||'[]') : [];
+const activeFilter = ()=> qsa('.filter-btn.active')[0]?.dataset.filter||'all';
 
 function render(keyword='', filter='all'){
   let out = PASAL.filter(e=>{
@@ -47,7 +48,7 @@ window.toggleBm = (key)=>{
   const i = BOOKMARK.indexOf(key);
   if (i>=0) BOOKMARK.splice(i,1); else BOOKMARK.push(key);
   localStorage.setItem('b', JSON.stringify(BOOKMARK));
-  render(qs('#q').value.trim().toLowerCase(), qs('.filter-btn.active')?.dataset.filter||'all');
+  render(qs('#q').value.trim().toLowerCase(), activeFilter());
 };
 
 // load+persist bookmarks
@@ -58,7 +59,7 @@ qs('#bookmarks-btn')?.addEventListener('click', ()=>{
   qs('#bookmark-panel').classList.add('open');
   render('', 'bookmarks');
 });
-qs('#close-bm')?.addEventListener('click', ()=>{ qs('#bookmark-panel').classList.remove('open'); render(qs('#q').value.trim().toLowerCase(), qs('.filter-btn').active?.dataset.filter||'all'); });
+qs('#close-bm')?.addEventListener('click', ()=>{ qs('#bookmark-panel').classList.remove('open'); render(qs('#q').value.trim().toLowerCase(), activeFilter()); });
 qs('#export-btn')?.addEventListener('click', exportBm);
 
 function exportBm(){
@@ -83,11 +84,10 @@ async function init(){
   const q = qs('#q');
   q.addEventListener('input', ()=>{
     qs('#clear').hidden = !q.value;
-    render(q.value.trim().toLowerCase(), qs('.filter-btn.active')?.dataset.filter||'all');
+    render(q.value.trim().toLowerCase(), activeFilter());
   });
-  // clear btn
   const cl = qs('#clear');
-  cl?.addEventListener('click', ()=>{ q.value=''; cl.hidden=true; render('', qs('.filter-btn.active')?.dataset.filter||'all'); });
+  cl?.addEventListener('click', ()=>{ q.value=''; cl.hidden=true; render('', activeFilter()); });
 
   // filter
   qsa('.filter-btn').forEach(b=>{
