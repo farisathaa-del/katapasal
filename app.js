@@ -106,4 +106,5 @@ async function init(){
   render();
 }
 document.addEventListener('DOMContentLoaded', init);
+init(); // juga panggil langsung bila DOMContentLoaded sudah lewat (module deferred)
 // ponytail: SSR/IndexedDB bila >5MB. Ini cukup fetch statis + localStorage.
