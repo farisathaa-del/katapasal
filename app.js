@@ -2,7 +2,7 @@
 const CACHE = 'katapasal-v1';
 // ponytail: semua path lewat <base href="/katapasal/"> — relative di subfolder GitHub Pages
 const BASE = document.querySelector('base')?.href || location.origin + '/';
-const A = (p) => new URL(p, BASE).pathname; // resolve ke /katapasal/...
+const A = (p) => new URL(p, BASE).href; // resolve full URL ke /katapasal/...
 const ASSETS = [A('/'), A('/index.html'), A('/style.css'), A('/app.js'), A('/manifest.json'), A('/icons/icon-192.png'), A('/icons/icon-512.png'), A('/icons/katapasal-logo.png'), A('/data/pasal.json'), A('/sw.js')];
 
 let PASAL = [], BOOKMARK = [];
