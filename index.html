@@ -42,9 +42,22 @@
   </main>
 
   <nav class="bottom-nav">
-    <button id="bookmarks-btn" class="nav-btn">🔖</button>
-    <button id="export-btn" class="nav-btn">📤</button>
+      <button id="bookmarks-btn" class="nav-btn">🔖<span id="bm-count"></span></button>
+      <button id="export-btn" class="nav-btn">📤</button>
   </nav>
+
+  <!-- Bookmark panel -->
+  <div id="bookmark-panel">
+    <div class="bookmark-sheet">
+      <div class="b-sheet-head">
+        <h2>🔖 Bookmark (<span id="bm-total">0</span>)</h2>
+        <button id="close-bm" class="nav-btn" style="background:none;color:#aaa">✕</button>
+      </div>
+      <div class="bookmark-list" id="bm-list">
+        <p class="empty bookmark-empty">Belum ada pasal disukai.</p>
+      </div>
+    </div>
+  </div>
 
   <script src="/app.js" type="module"></script>
 </body>
