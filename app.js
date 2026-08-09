@@ -1,7 +1,9 @@
 // KataPasal PWA app — search + bookmark + export
 const CACHE = 'katapasal-v1';
-// ponytail: ASSETS list statis untuk SW precache
-const ASSETS = ['/', '/index.html', '/style.css', '/app.js', '/manifest.json', '/icons/icon-192.png', '/icons/icon-512.png', '/icons/katapasal-logo.png', '/data/pasal.json', '/sw.js'];
+// ponytail: semua path lewat <base href="/katapasal/"> — relative di subfolder GitHub Pages
+const BASE = document.querySelector('base')?.href || location.origin + '/';
+const A = (p) => new URL(p, BASE).pathname; // resolve ke /katapasal/...
+const ASSETS = [A('/'), A('/index.html'), A('/style.css'), A('/app.js'), A('/manifest.json'), A('/icons/icon-192.png'), A('/icons/icon-512.png'), A('/icons/katapasal-logo.png'), A('/data/pasal.json'), A('/sw.js')];
 
 let PASAL = [], BOOKMARK = [];
 const qs = q => document.querySelector(q);
@@ -73,7 +75,7 @@ function exportBm(){
 
 async function init(){
   try {
-    const res = await fetch('/data/pasal.json');
+    const res = await fetch(A('/data/pasal.json'));
     PASAL = await res.json();
   } catch(e){
     qs('#results').innerHTML = '<p class="empty">Gagal memuat data.</p>'; return;
@@ -100,7 +102,7 @@ async function init(){
   });
 
   // SW
-  if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js').catch(()=>0);
+  if ('serviceWorker' in navigator) navigator.serviceWorker.register(A('/sw.js')).catch(()=>0);
   render();
 }
 document.addEventListener('DOMContentLoaded', init);
