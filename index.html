@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KataPasal — Bank Pasal Hukum Pidana</title>
+  <meta name="description" content="Cari pasal KUHP baru, KUHAP baru, dan UU Penyesuaian Pidana. Berlaku 2 Jan 2026." />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo-wrap">
+      <img src="/icons/katapasal-logo.png" alt="KataPasal" class="logo" />
+    </div>
+    <h1>BANK PASAL</h1>
+    <p class="subtitle">KUHP · KUHAP · Penyesuaian 2026</p>
+  </header>
+
+  <main class="main">
+    <section class="search-bar">
+      <input type="search" id="q" placeholder="Cari pasal / kata kunci (mis: pencurian, penahanan, denda kategori)…" autocomplete="off" />
+      <button id="clear" hidden>✕</button>
+    </section>
+
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">Semua</button>
+      <button class="filter-btn" data-filter="KUHAP 2025">KUHAP Baru</button>
+      <button class="filter-btn" data-filter="KUHAP 1981">KUHAP Lama</button>
+      <button class="filter-btn" data-filter="KUHP 2023">KUHP Baru</button>
+      <button class="filter-btn" data-filter="Penyesuaian 2026">Penyesuaian</button>
+      <button class="filter-btn" data-filter="Kategori Denda">Denda/Kategori</button>
+    </div>
+
+    <section class="results" id="results">
+      <p class="empty">Ketik di atas untuk mencari pasal…</p>
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <button id="bookmarks-btn" class="nav-btn">🔖</button>
+    <button id="export-btn" class="nav-btn">📤</button>
+  </nav>
+
+  <script src="/app.js" type="module"></script>
+</body>
+</html>
