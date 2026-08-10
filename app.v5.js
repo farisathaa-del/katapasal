@@ -3,7 +3,13 @@ const SUB='/katapasal',PASAL_URL=SUB+'/data/pasal.json',SW_URL=SUB+'/sw.js',PAGE
 const SRC_ORDER=['KUHP 2023','KUHAP 2025','KUHAP 1981','KUHP 1946','Penyesuaian 2026 Pasal VII','Kategori Denda'];
 const SRC_SHORT={'KUHP 2023':'KUHP Baru','KUHAP 2025':'KUHAP Baru','KUHAP 1981':'KUHAP Lama','KUHP 1946':'KUHP Lama','Penyesuaian 2026 Pasal VII':'Penyesuaian 2026','Kategori Denda':'Kategori Denda'};
 const SRC_COLORS={'KUHP 2023':'#6366f1','KUHAP 2025':'#0d9488','KUHAP 1981':'#6b7280','KUHP 1946':'#8b5cf6','Penyesuaian 2026 Pasal VII':'#d97706','Kategori Denda':'#dc2626'};
-const POPULAR=[477,466,458,459,479,365];
+// ponytail: dynamic popular — entries with mapping from lama, prioritized
+function getPopular(){
+  const mapped=PASAL.filter(e=>e.pasal_terkait_lama&&e.pasal_terkait_lama.length&&e.source==='KUHP 2023').slice(0,6);
+  if(mapped.length>=6)return mapped;
+  const withAncaman=PASAL.filter(e=>e.ancaman_pidana&&e.source==='KUHP 2023'&&!mapped.includes(e)).slice(0,6-mapped.length);
+  return[...mapped,...withAncaman];
+}
 let PASAL=[],BM=[],FILTERED=[],shown=0,selBagian=null,selBuku='BUKU PERTAMA',dark=false;
 const $=q=>document.querySelector(q),$$=q=>document.querySelectorAll(q);
 const esc=s=>(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
@@ -20,7 +26,7 @@ const srcBadge=(e,cls)=>`<span class="source-badge ${cls||''}" style="background
 const textShort=(t,n)=>esc(t).length>n?esc(t).slice(0,n)+'…':esc(t);
 
 function renderHome(){
-  const pop=POPULAR.map(n=>getPasal('KUHP 2023',n)).filter(Boolean);
+  const pop=getPopular();
   $('#app').innerHTML=`
   <section class="hero"><h2>Cari Pasal atau Kata Kunci</h2>
     <div class="hero-search"><input id="hq" type="search" placeholder="Cari pasal, kata kunci..." autocomplete="off"/>
@@ -40,22 +46,27 @@ function renderHome(){
   $('#hq').addEventListener('keydown',e=>{if(e.key==='Enter')goSearch($('#hq').value)});
 }
 
-function goSearch(kw){
-  if(!kw)return;
-  $('#q').value=kw;
+function goSearch(kw,src){
+  if(!kw&&!src)return;
+  if(src)selSrc=src;
+  if(kw)$('#q').value=kw;
   location.hash='#/search';
   $('#q').focus();
 }
 
 function renderSearch(){
   const kw=($('#q').value||'').trim().toLowerCase();
-  $('#app').innerHTML=`<div class="results-wrap" id="rw"></div>`;
+  const srcs=[['all','Semua'],['KUHP 2023','KUHP Baru'],['KUHAP 2025','KUHAP Baru'],['KUHAP 1981','KUHAP Lama'],['KUHP 1946','KUHP Lama'],['Penyesuaian 2026 Pasal VII','Penyesuaian'],['Kategori Denda','Denda']];
+  const curSrc=selSrc||'all';
+  $('#app').innerHTML=`<div class="filter-bar">${srcs.map(([k,v])=>`<button class="filter-btn${curSrc===k?' active':''}" data-src="${k}">${v}</button>`).join('')}</div><div class="results-wrap" id="rw"></div>`;
+  $$('.filter-btn').forEach(b=>b.addEventListener('click',()=>{selSrc=b.dataset.src;$$('.filter-btn').forEach(x=>x.classList.toggle('active',x===b));doSearch(kw)}));
   doSearch(kw);
 }
 
 function doSearch(kw){
   const rw=$('#rw');if(!rw)return;
   let out=PASAL;
+  if(selSrc&&selSrc!=='all')out=out.filter(e=>e.source===selSrc);
   if(kw)out=PASAL.filter(e=>(e.txt||'').toLowerCase().includes(kw)||String(e.pasal).includes(kw));
   const numHit=kw&&/^\d+$/.test(kw)?PASAL.filter(e=>String(e.pasal)===kw):[];
   let html='';
