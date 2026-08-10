@@ -159,7 +159,7 @@ function buildTree(src,kw){
     html+=`<div class="bab-accd" style="margin-bottom:.75rem"><h3 style="font-size:.8rem;font-weight:700;color:var(--muted);margin-bottom:.5rem">${bk.replace('BUKU ','Buku ')} — ${BUKU_LABEL[bk]}</h3>`;
     Object.keys(babs).sort((a,b)=>toRN((a.match(/Bab\s+(\w+)/)||[])[1]||'')-toRN((b.match(/Bab\s+(\w+)/)||[])[1]||'')).forEach(bab=>{
       const ps=babs[bab];
-      html+=`<div class="bab-accd" data-bab="${esc(bab)}"><div class="bab-accd-head neu" onclick="toggleBab(this)">${esc(bab)}<span class="cnt">${ps.length} pasal</span></div>
+      html+=`<div class="bab-accd" data-bab="${esc(bab)}"><div class="bab-accd-head neu" onclick="toggleBab(this)"><span>${esc(bab)}</span><span class="cnt">${ps.length} pasal ▾</span></div>
       <div class="bab-accd-body">${ps.map(e=>{
         const bag=e.bagian?' — '+esc(e.bagian):'';
         return `<div class="pasal-link" data-key="${esc(bmKey(e))}" onclick="location.hash='#/pasal/${encodeURIComponent(bmKey(e))}'">Pasal ${e.pasal}${bag}</div>`;
@@ -181,7 +181,7 @@ function showBagian(key){
   const [src,num]=key.split('|');
   const e=getPasal(src,num);
   const r=$('#bab-right');if(!r)return;
-  r.innerHTML=`<div class="breadcrumb"><a href="#/">Beranda</a><span>${esc(src)}</span><span>${e.bab?esc(e.bab):''}</span></div>`;
+  r.innerHTML=`<div class="breadcrumb"><a href="#/">Beranda</a><a href="#/bab">${esc(src)}</a><span>${e.bab?esc(e.bab):''}</span></div>`;
   if(e.bagian)r.innerHTML+=`<h3 style="font-size:.85rem;font-weight:700;margin-bottom:.75rem">${esc(e.bagian)}</h3>`;
   const ps=PASAL.filter(p=>p.source===src&&p.bab===e.bab&&(!e.bagian||p.bagian===e.bagian));
   r.innerHTML+=ps.map(p=>`<div class="pasal-card neu" onclick="location.hash='#/pasal/${encodeURIComponent(bmKey(p))}'">
