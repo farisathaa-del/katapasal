@@ -46,6 +46,31 @@ h1{font-size:20px;font-weight:600;letter-spacing:1px}
 /* expand button */
 .expand-btn{background:none;border:none;color:var(--accent);font-size:13px;cursor:pointer;margin-top:4px;padding:0}
 .expand-btn:hover{text-decoration:underline}
+/* detail view */
+.detail-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;margin:12px 16px}
+.back-btn{color:var(--accent);text-decoration:none;font-size:14px;display:inline-block;margin-bottom:12px}
+.detail-header h2{font-size:22px;color:var(--text);margin:8px 0 4px}
+.hirarki{display:flex;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+.hirarki-item{font-size:12px;color:var(--muted);background:#1a1a1a;padding:2px 8px;border-radius:4px}
+.ancaman-row{margin:12px 0}
+.badge{display:inline-block;font-size:12px;padding:4px 10px;border-radius:6px;font-weight:600}
+.badge-pidana{background:#1e3a5f;color:#60a5fa}
+.badge-mati{background:#5f1e1e;color:#f87171}
+.badge-seumur{background:#5f3a1e;color:#fbbf24}
+.detail-text{font-size:15px;line-height:1.8;color:var(--text);white-space:pre-line;margin:16px 0;padding:16px;background:#0a0a0a;border-radius:8px;border:1px solid var(--border)}
+.detail-actions{display:flex;gap:8px;margin-top:12px}
+.bm-btn-detail,.copy-btn{padding:8px 16px;border-radius:8px;border:1px solid var(--border);background:var(--card);color:var(--text);cursor:pointer;font-size:13px}
+.bm-btn-detail.on{background:var(--accent);color:#000}
+.copy-btn:hover{background:#222}
+/* source badges */
+.source-badge,.source-badge-sm{font-size:11px;padding:2px 8px;border-radius:4px;color:#fff;white-space:nowrap}
+.card-ancaman{font-size:11px;color:#60a5fa;margin:2px 0}
+.card-top{cursor:pointer}
+.card-top:hover{opacity:.85}
+/* disclaimer */
+.disclaimer-footer{max-width:680px;margin:0 auto;padding:16px;font-size:11px;color:#555;text-align:center;border-top:1px solid var(--border)}
+.disclaimer-footer a{color:#666}
+.disclaimer{font-size:11px;color:#555;text-align:center;padding:16px}
 
 /* Bottom nav */
 .bottom-nav{position:fixed;bottom:0;left:0;right:0;background:var(--bg);border-top:1px solid var(--border);display:flex;justify-content:center;gap:32px;padding:10px;height:56px}
