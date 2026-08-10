@@ -109,5 +109,13 @@ fetch(PASAL_URL)
     qs('#results').innerHTML = '<p class="empty">Gagal memuat data: ' + e.message + '</p>';
   });
 
-// register SW
-if ('serviceWorker' in navigator) navigator.serviceWorker.register(SW_URL).catch(() => 0);
+// unregister old SW + clear stale caches
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.getRegistrations().then(regs => {
+    regs.forEach(r => r.unregister());
+  });
+  if ('caches' in window) {
+    caches.keys().then(keys => keys.forEach(k => caches.delete(k)));
+  }
+  navigator.serviceWorker.register(SW_URL).catch(() => 0);
+}
