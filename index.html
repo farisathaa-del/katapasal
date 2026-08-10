@@ -2,84 +2,48 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KataPasal — Bank Pasal Hukum Pidana</title>
-  <meta name="description" content="Cari pasal KUHP baru, KUHAP baru, dan UU Penyesuaian Pidana. Berlaku 2 Jan 2026." />
+  <title>Kamus Pasal — Hukum Pidana Indonesia</title>
+  <meta name="description" content="Cari pasal KUHP baru, KUHAP baru, dan UU Penyesuaian Pidana." />
   <link rel="manifest" href="/katapasal/manifest.json" />
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#e8eaf0" />
   <meta name="mobile-web-app-capable" content="yes" />
   <link rel="apple-touch-icon" href="/katapasal/icons/icon-192.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
   <link rel="stylesheet" href="/katapasal/style.css" />
 </head>
 <body>
-  <header class="header">
-    <img src="/katapasal/icons/katapasal-logo.png" alt="KataPasal" class="logo-img" />
-    <div>
-      <h1>BANK PASAL</h1>
-      <p class="subtitle">KUHP · KUHAP · Penyesuaian 2026</p>
+  <header class="topnav" id="topnav">
+    <div class="topnav-inner">
+      <a href="#/" class="topnav-logo"><span class="material-symbols-outlined">menu_book</span> Kamus Pasal</a>
+      <div class="topnav-search" id="top-search">
+        <span class="material-symbols-outlined">search</span>
+        <input type="search" id="q" placeholder="Cari pasal..." autocomplete="off" />
+        <button id="clear" class="topnav-clear" hidden><span class="material-symbols-outlined">close</span></button>
+      </div>
+      <button id="dark-toggle" class="neu-btn-icon" title="Ganti tema"><span class="material-symbols-outlined">dark_mode</span></button>
     </div>
   </header>
-
-  <!-- View tabs -->
-  <div class="view-tabs">
-    <button class="vt active" data-view="list">📋 Semua Pasal</button>
-    <button class="vt" data-view="bab">📖 Navigasi BAB</button>
-  </div>
-
-  <main>
-    <!-- Search bar (list view only) -->
-    <div class="search-bar"><input id="q" type="search" placeholder="Cari pasal / kata kunci (mis: 477, pencurian...)" autocomplete="off" /><button id="clear" hidden>✕</button></div>
-
-    <!-- Filters (list view only) -->
-    <div class="filters">
-      <button class="filter-btn active" data-filter="all">Semua</button>
-      <button class="filter-btn" data-filter="KUHAP 2025">KUHAP Baru</button>
-      <button class="filter-btn" data-filter="KUHAP 1981">KUHAP Lama</button>
-      <button class="filter-btn" data-filter="KUHP 2023">KUHP Baru</button>
-      <button class="filter-btn" data-filter="KUHP 1946">KUHP Lama</button>
-      <button class="filter-btn" data-filter="Penyesuaian 2026 Pasal VII">Penyesuaian</button>
-      <button class="filter-btn" data-filter="Kategori Denda">Denda/Kategori</button>
-    </div>
-
-    <!-- Direct search result (shown when number typed) -->
-    <div id="direct-hit" class="direct-hit" hidden></div>
-
-    <!-- List view -->
-    <div id="list-view">
-      <div id="results"></div>
-      <button id="load-more" class="filter-btn" style="margin:16px auto;display:block" hidden>Muat lagi</button>
-    </div>
-
-    <!-- BAB accordion view -->
-    <div id="bab-view" hidden></div>
-
-    <!-- Detail view -->
-    <div id="detail-view" hidden></div>
-  </main>
-
-  <footer class="disclaimer-footer">
-    Referensi edukatif. Bukan pengganti konsultasi hukum. Verifikasi teks resmi di <a href="https://peraturan.bpk.go.id" target="_blank">JDIH BPK</a>.
+  <main id="app"></main>
+  <footer class="site-footer">
+    <p><span class="material-symbols-outlined" style="vertical-align:middle">menu_book</span> <strong>Kamus Pasal</strong></p>
+    <p>Referensi edukatif. Bukan pengganti konsultasi hukum. Verifikasi teks resmi di <a href="https://peraturan.bpk.go.id" target="_blank">JDIH BPK</a>.</p>
+    <p>&copy; 2026 Kamus Pasal</p>
   </footer>
-
-  <!-- Bottom nav tabs -->
-  <nav class="bottom-nav">
-    <button class="nav-btn active" data-tab="list">🔍<span>Cari</span></button>
-    <button class="nav-btn" data-tab="bab">📖<span>BAB</span></button>
-    <button class="nav-btn" data-tab="bm">🔖<span>Bookmark</span></button>
+  <nav class="bottomnav" id="bottomnav">
+    <button class="bn-btn active" data-tab="home"><span class="material-symbols-outlined">search</span><span>Cari</span></button>
+    <button class="bn-btn" data-tab="bab"><span class="material-symbols-outlined">book</span><span>BAB</span></button>
+    <button class="bn-btn" data-tab="bm"><span class="material-symbols-outlined">bookmark</span><span>Bookmark</span></button>
   </nav>
-
-  <!-- Bookmark panel -->
-  <div id="bookmark-panel" class="b-panel">
-    <div class="b-sheet">
-      <div class="b-sheet-head">
-        <h2>🔖 Bookmark (<span id="bm-total">0</span>)</h2>
-        <button id="close-bm">✕</button>
-      </div>
-      <div id="bm-results"></div>
+  <div id="bm-panel" class="bm-panel">
+    <div class="bm-sheet">
+      <div class="bm-head"><h2>Bookmark (<span id="bm-count">0</span>)</h2><button id="close-bm"><span class="material-symbols-outlined">close</span></button></div>
+      <div id="bm-list"></div>
     </div>
   </div>
-
-  <script src="/katapasal/app.v4.js"></script>
+  <script src="/katapasal/app.v5.js"></script>
 </body>
 </html>
