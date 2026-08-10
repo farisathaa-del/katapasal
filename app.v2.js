@@ -119,6 +119,7 @@ function cardHTML(e) {
     '<button class="bm-btn ' + (fav?'on':'') + '" data-key="' + esc(k) + '">' + (fav?'⭐':'🔖') + '</button></div>';
 }
 
+let RENDER_TARGET = '#results';
 function render(kw='', filter='all') {
   let out = PASAL;
   if (filter !== 'all') out = out.filter(e => e.source === filter);
@@ -126,10 +127,11 @@ function render(kw='', filter='all') {
   if (kw) out = out.filter(e => (e.txt||'').toLowerCase().includes(kw) || String(e.pasal).includes(kw));
   FILTERED = out;
   shown = 0;
-  const rc = qs('#results');
+  RENDER_TARGET = filter === 'bookmarks' ? '#bm-results' : '#results';
+  const rc = qs(RENDER_TARGET);
   if (!out.length) {
     rc.innerHTML = '<p class="empty">' + (filter==='bookmarks'?'🔖 Belum ada bookmark.':'Tidak ditemukan.') + '</p>';
-    qs('#load-more').hidden = true;
+    if (RENDER_TARGET === '#results') qs('#load-more').hidden = true;
     updateBadge();
     return;
   }
@@ -138,14 +140,16 @@ function render(kw='', filter='all') {
 }
 
 function showMore() {
-  const rc = qs('#results');
+  const rc = qs(RENDER_TARGET);
   const batch = FILTERED.slice(shown, shown + PAGE);
   if (shown === 0) rc.innerHTML = '';
   rc.insertAdjacentHTML('beforeend', batch.map(cardHTML).join(''));
   shown += batch.length;
-  qs('#load-more').hidden = shown >= FILTERED.length;
-  if (FILTERED.length > PAGE) {
-    qs('#load-more').textContent = 'Muat lagi (' + shown + '/' + FILTERED.length + ')';
+  if (RENDER_TARGET === '#results') {
+    qs('#load-more').hidden = shown >= FILTERED.length;
+    if (FILTERED.length > PAGE) {
+      qs('#load-more').textContent = 'Muat lagi (' + shown + '/' + FILTERED.length + ')';
+    }
   }
 }
 
