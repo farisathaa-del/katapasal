@@ -43,6 +43,9 @@ h1{font-size:20px;font-weight:600;letter-spacing:1px}
 .bookmark-list{margin-top:12px}
 .bookmark-item{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:10px;margin-bottom:6px}
 .bookmark-empty{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+/* expand button */
+.expand-btn{background:none;border:none;color:var(--accent);font-size:13px;cursor:pointer;margin-top:4px;padding:0}
+.expand-btn:hover{text-decoration:underline}
 
 /* Bottom nav */
 .bottom-nav{position:fixed;bottom:0;left:0;right:0;background:var(--bg);border-top:1px solid var(--border);display:flex;justify-content:center;gap:32px;padding:10px;height:56px}

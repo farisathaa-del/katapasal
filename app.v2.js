@@ -29,8 +29,12 @@ function render(kw='', filter='all'){
   }
   rc.innerHTML = out.map(e => {
     const k = bmKey(e), fav = BOOKMARK.includes(k);
-    return '<div class="card"><h3>' + e.source + ' — Pasal ' + e.pasal + '</h3>' +
-      '<p>' + esc((e.txt||'').slice(0,500)) + '</p>' +
+    const full = esc(e.txt||'');
+    const short = full.length > 300 ? full.slice(0,300) + '…' : full;
+    const needsExpand = full.length > 300;
+    return '<div class="card" data-key="' + esc(k) + '"><h3>' + e.source + ' — Pasal ' + e.pasal + '</h3>' +
+      '<p class="card-text">' + (needsExpand ? '<span class="trunc">' + short + '</span><span class="full" hidden>' + full + '</span>' : full) + '</p>' +
+      (needsExpand ? '<button class="expand-btn" data-key="' + esc(k) + '">Selengkapnya ▾</button>' : '') +
       '<button class="bm-btn ' + (fav?'on':'') + '" data-key="' + esc(k) + '">' + (fav?'⭐':'🔖') + '</button></div>';
   }).join('');
   updateBadge();
@@ -45,6 +49,18 @@ function updateBadge(){
 
 // event delegation for bookmark buttons
 document.addEventListener('click', e => {
+  // expand/collapse
+  const exp = e.target.closest('.expand-btn');
+  if (exp) {
+    const card = exp.closest('.card');
+    const trunc = card.querySelector('.trunc');
+    const full = card.querySelector('.full');
+    const isOpen = !full.hidden;
+    trunc.hidden = !isOpen;
+    full.hidden = isOpen;
+    exp.textContent = isOpen ? 'Selengkapnya ▾' : 'Sembunyikan ▴';
+    return;
+  }
   const btn = e.target.closest('.bm-btn');
   if (!btn) return;
   const key = btn.dataset.key;
