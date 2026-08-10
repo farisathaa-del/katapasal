@@ -10,7 +10,7 @@ function getPopular(){
   const withAncaman=PASAL.filter(e=>e.ancaman_pidana&&e.source==='KUHP 2023'&&!mapped.includes(e)).slice(0,6-mapped.length);
   return[...mapped,...withAncaman];
 }
-let PASAL=[],BM=[],FILTERED=[],shown=0,selBagian=null,selBuku='BUKU PERTAMA',dark=false;
+let PASAL=[],BM=[],FILTERED=[],shown=0,selBagian=null,selBuku='BUKU PERTAMA',selSrc='all',dark=false;
 const $=q=>document.querySelector(q),$$=q=>document.querySelectorAll(q);
 const esc=s=>(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
 const bmKey=e=>e.source+'|'+e.pasal;
