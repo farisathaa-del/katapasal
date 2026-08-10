@@ -3,7 +3,7 @@ const CACHE = 'katapasal-v5';
 const BASE = '/katapasal';
 const ASSETS = [
   BASE + '/style.css',
-  BASE + '/app.v3.js',
+  BASE + '/app.v4.js',
   BASE + '/manifest.json',
   BASE + '/icons/icon-192.png',
   BASE + '/icons/icon-512.png',
