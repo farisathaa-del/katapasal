@@ -102,7 +102,7 @@ function cardHTML(e){
 }
 
 function renderBAB(initSrc){
-  let src=initSrc||selSrc||'KUHP 2023';
+  let src=initSrc||(selSrc&&selSrc!=='all'?selSrc:'')||'KUHP 2023';
   const entries=PASAL.filter(e=>e.source===src);
   $('#app').innerHTML=`
   <div class="bab-layout">
