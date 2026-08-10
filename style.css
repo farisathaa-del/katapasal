@@ -71,6 +71,12 @@ h1{font-size:20px;font-weight:600;letter-spacing:1px}
 .disclaimer-footer{max-width:680px;margin:0 auto;padding:16px;font-size:11px;color:#555;text-align:center;border-top:1px solid var(--border)}
 .disclaimer-footer a{color:#666}
 .disclaimer{font-size:11px;color:#555;text-align:center;padding:16px}
+/* mapping */
+.mapping-section{margin-top:16px;padding-top:12px;border-top:1px solid var(--border)}
+.mapping-section h4{font-size:14px;color:var(--accent);margin-bottom:8px}
+.mapping-list{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.mapping-badge{font-size:12px;background:#1e293b;color:#93c5fd;padding:3px 10px;border-radius:6px;border:1px solid #334155}
+.mapping-cat{font-size:12px;color:var(--muted);margin-left:4px}
 
 /* Bottom nav */
 .bottom-nav{position:fixed;bottom:0;left:0;right:0;background:var(--bg);border-top:1px solid var(--border);display:flex;justify-content:center;gap:32px;padding:10px;height:56px}

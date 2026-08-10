@@ -75,8 +75,12 @@ function showDetail(id) {
         '<button class="bm-btn-detail ' + (isBm?'on':'') + '" data-key="' + esc(k) + '">' + (isBm?'⭐ Bookmark':'🔖 Bookmark') + '</button>' +
         '<button class="copy-btn" onclick="navigator.clipboard.writeText(decodeURIComponent(\'' + encodeURIComponent(e.txt) + '\')).then(()=>this.textContent=\'✓ Tersalin\')">📋 Salin Teks</button>' +
       '</div>' +
-    '</div>' +
-    '<div class="disclaimer">Referensi edukatif. Bukan pengganti konsultasi hukum. Verifikasi teks resmi di <a href="https://peraturan.bpk.go.id" target="_blank">JDIH BPK</a>.</div>';
+      (e.pasal_terkait_lama && e.pasal_terkait_lama.length ?
+        '<div class="mapping-section"><h4>📍 Pemetaan dari KUHP Lama</h4><div class="mapping-list">' +
+        e.pasal_terkait_lama.map(r => '<span class="mapping-badge">' + esc(r) + '</span>').join('') +
+        (e.catatan_perubahan ? '<span class="mapping-cat">' + esc(e.catatan_perubahan) + '</span>' : '') +
+        '</div></div>' : '') +
+    '</div>';
 
   window.scrollTo(0, 0);
 }

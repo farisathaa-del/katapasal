@@ -9026,8 +9026,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "Denda maks. kategori I",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 170 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Perusakan ketertiban umum"
   },
   {
     "source": "KUHP 2023",
@@ -9036,8 +9039,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "Penjara maks. 9 bulan; Denda maks. kategori II",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 171 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Pengeroyokan"
   },
   {
     "source": "KUHP 2023",
@@ -9046,8 +9052,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "Penjara maks. 9 bulan; Denda maks. kategori II",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 174 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Penganiayaan berat"
   },
   {
     "source": "KUHP 2023",
@@ -9636,8 +9645,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "Penjara maks. 1 tahun; Denda maks. kategori III",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 281 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Perzinahan"
   },
   {
     "source": "KUHP 2023",
@@ -9646,8 +9658,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "Penjara maks. 9 tahun",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 282 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Pencabulan"
   },
   {
     "source": "KUHP 2023",
@@ -9656,8 +9671,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "Penjara maks. 9 tahun",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 284 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Pemerkosaan"
   },
   {
     "source": "KUHP 2023",
@@ -9666,8 +9684,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "Penjara maks. 12 tahun",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 285 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Pemerkosaan berat"
   },
   {
     "source": "KUHP 2023",
@@ -10046,8 +10067,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "Penjara seumur hidup",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 338 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Pembunuhan"
   },
   {
     "source": "KUHP 2023",
@@ -10056,8 +10080,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "Penjara seumur hidup; Pidana mati",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 339 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Pembunuhan berencana"
   },
   {
     "source": "KUHP 2023",
@@ -10066,8 +10093,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "Penjara maks. 7 tahun",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 340 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Pembunuhan berencana (curas)"
   },
   {
     "source": "KUHP 2023",
@@ -10076,8 +10106,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "Penjara maks. 9 tahun",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 341 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Penculikan → penganiayaan/mati"
   },
   {
     "source": "KUHP 2023",
@@ -10086,8 +10119,11 @@
     "bab": "Bab XXI",
     "bagian": "Bagian Kesatu",
     "ancaman_pidana": "Penjara maks. 4 tahun",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 342 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Penculikan untuk pemerasan"
   },
   {
     "source": "KUHP 2023",
@@ -10096,8 +10132,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "Penjara maks. 4 tahun",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 343 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Penganiayaan berat"
   },
   {
     "source": "KUHP 2023",
@@ -10106,8 +10145,12 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "Penjara maks. 5 tahun",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 344 WvS",
+      "Pasal 345 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Penganiayaan"
   },
   {
     "source": "KUHP 2023",
@@ -10116,8 +10159,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 346 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Penganiayaan ringan"
   },
   {
     "source": "KUHP 2023",
@@ -10126,8 +10172,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "Penjara maks. 2 tahun; Denda maks. kategori III",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 347 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Ancaman kekerasan"
   },
   {
     "source": "KUHP 2023",
@@ -10136,8 +10185,11 @@
     "bab": "Bab XXII",
     "bagian": "Bagian Kedua",
     "ancaman_pidana": "Penjara maks. 4 tahun",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 348 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Perawatan/penelantaran"
   },
   {
     "source": "KUHP 2023",
@@ -10146,8 +10198,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "Penjara maks. 8 tahun",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 349 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Aborsi"
   },
   {
     "source": "KUHP 2023",
@@ -10236,8 +10291,11 @@
     "bab": "Bab XXIV",
     "bagian": "Bagian Kedua",
     "ancaman_pidana": "Penjara maks. 7 tahun; Denda maks. kategori V",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 362 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Pencurian"
   },
   {
     "source": "KUHP 2023",
@@ -10246,8 +10304,11 @@
     "bab": "Bab XXIV",
     "bagian": "Bagian Kedua",
     "ancaman_pidana": "Penjara seumur hidup; Pidana mati",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 365 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Pencurian dengan pemberatan"
   },
   {
     "source": "KUHP 2023",
@@ -10256,8 +10317,11 @@
     "bab": "",
     "bagian": "",
     "ancaman_pidana": "",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 366 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Pencurian oleh pegawai"
   },
   {
     "source": "KUHP 2023",
@@ -10266,8 +10330,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 367 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Pencurian kendaraan bermotor"
   },
   {
     "source": "KUHP 2023",
@@ -10276,8 +10343,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "Penjara maks. 9 tahun",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 368 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Penipuan"
   },
   {
     "source": "KUHP 2023",
@@ -10286,8 +10356,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "Penjara maks. 4 tahun; Denda maks. kategori IV",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 378 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Penggelapan"
   },
   {
     "source": "KUHP 2023",
@@ -10296,8 +10369,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 372 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Pemalsuan surat"
   },
   {
     "source": "KUHP 2023",
@@ -10306,8 +10382,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 374 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Pemalsuan uang"
   },
   {
     "source": "KUHP 2023",
@@ -10316,8 +10395,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "Penjara maks. 5 tahun; Denda maks. kategori V",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 379 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Perusakan"
   },
   {
     "source": "KUHP 2023",
@@ -10326,8 +10408,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "Denda maks. kategori II",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 380 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Pencurian dengan ancaman"
   },
   {
     "source": "KUHP 2023",
@@ -10336,8 +10421,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 381 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Perampokan"
   },
   {
     "source": "KUHP 2023",
@@ -10346,8 +10434,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 382 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Pemerasan"
   },
   {
     "source": "KUHP 2023",
@@ -10356,8 +10447,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 383 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Pemerasan dengan ancaman"
   },
   {
     "source": "KUHP 2023",
@@ -10366,8 +10460,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 384 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Pemerasan berat"
   },
   {
     "source": "KUHP 2023",
@@ -10376,8 +10473,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "Penjara maks. 4 tahun; Denda maks. kategori V",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 385 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Pemerasan premanisme"
   },
   {
     "source": "KUHP 2023",
@@ -10386,8 +10486,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "Penjara maks. 2 tahun; Denda maks. kategori IV",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 386 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Pemerasan kolektif"
   },
   {
     "source": "KUHP 2023",
@@ -10396,8 +10499,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "Denda maks. kategori II",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 387 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Pemerasan dengan kekerasan"
   },
   {
     "source": "KUHP 2023",
@@ -10406,8 +10512,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "Penjara maks. 1 tahun; Denda maks. kategori II",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 388 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Pemerasan dengan ancaman mati/berat"
   },
   {
     "source": "KUHP 2023",
@@ -10416,8 +10525,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "Denda maks. kategori II",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 389 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Penipuan"
   },
   {
     "source": "KUHP 2023",
@@ -10426,8 +10538,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "Penjara maks. 5 tahun; Denda maks. kategori V",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 390 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Penipuan berat"
   },
   {
     "source": "KUHP 2023",
@@ -10436,8 +10551,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "Penjara maks. 1 tahun; Denda maks. kategori III",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 391 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Penggelapan"
   },
   {
     "source": "KUHP 2023",
@@ -10446,8 +10564,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "Penjara maks. 6 tahun; Denda maks. kategori V",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 392 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Penggelapan berat"
   },
   {
     "source": "KUHP 2023",
@@ -10456,8 +10577,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "Penjara maks. 2 tahun; Denda maks. kategori III",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 393 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Perusakan"
   },
   {
     "source": "KUHP 2023",
@@ -10466,8 +10590,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "Penjara maks. 3 tahun; Denda maks. kategori IV",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 394 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Perusakan berat"
   },
   {
     "source": "KUHP 2023",
@@ -10476,8 +10603,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "Penjara maks. 5 tahun; Denda maks. kategori V",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 395 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Pemalsuan dokumen"
   },
   {
     "source": "KUHP 2023",
@@ -10486,8 +10616,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "Penjara maks. 5 tahun; Denda maks. kategori V",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 396 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Pemalsuan surat"
   },
   {
     "source": "KUHP 2023",
@@ -10496,8 +10629,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "Penjara maks. 5 tahun; Denda maks. kategori V",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 397 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Pemalsuan surat berat"
   },
   {
     "source": "KUHP 2023",
@@ -10506,8 +10642,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "Penjara maks. 3 tahun; Denda maks. kategori IV",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 398 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Pemalsuan surat keterangan"
   },
   {
     "source": "KUHP 2023",
@@ -10516,8 +10655,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "Penjara maks. 3 tahun; Denda maks. kategori IV",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 399 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Pemalsuan tanda tangan"
   },
   {
     "source": "KUHP 2023",
@@ -10526,8 +10668,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "Penjara maks. 4 tahun; Denda maks. kategori V",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 400 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Pemalsuan cap negara"
   },
   {
     "source": "KUHP 2023",
@@ -10536,8 +10681,11 @@
     "bab": "Bab XXVII",
     "bagian": "Bagian Kedua",
     "ancaman_pidana": "Penjara maks. 1 tahun; Denda maks. kategori III",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 401 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Pemalsuan cap negara berat"
   },
   {
     "source": "KUHP 2023",
@@ -10666,8 +10814,13 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "Penjara maks. 6 tahun; Denda maks. kategori V",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 123 WvS",
+      "Pasal 124 WvS",
+      "Pasal 125 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Suap-menyuap"
   },
   {
     "source": "KUHP 2023",
@@ -10676,8 +10829,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "Penjara maks. 1 tahun; Denda maks. kategori III",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 126 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Suap aktif"
   },
   {
     "source": "KUHP 2023",
@@ -10686,8 +10842,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "Penjara maks. 6 tahun; Denda maks. kategori V",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 127 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Suap pasif"
   },
   {
     "source": "KUHP 2023",
@@ -10696,8 +10855,11 @@
     "bab": "Bab XXXVII",
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "",
-    "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "pasal_terkait_lama": [
+      "Pasal 128 WvS"
+    ],
+    "penjelasan": "",
+    "catatan_perubahan": "Gratifikasi"
   },
   {
     "source": "KUHP 2023",
@@ -10757,7 +10919,8 @@
     "bagian": "Bagian Keenam",
     "ancaman_pidana": "Penjara maks. 4 tahun; Denda maks. kategori III",
     "pasal_terkait_lama": [],
-    "penjelasan": ""
+    "penjelasan": "",
+    "catatan_perubahan": "Narkotika"
   },
   {
     "source": "KUHP 2023",

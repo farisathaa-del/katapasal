@@ -1,0 +1,395 @@
+[
+  {
+    "baru": 458,
+    "lama": [
+      338
+    ],
+    "catatan": "Pembunuhan"
+  },
+  {
+    "baru": 459,
+    "lama": [
+      339
+    ],
+    "catatan": "Pembunuhan berencana"
+  },
+  {
+    "baru": 460,
+    "lama": [
+      340
+    ],
+    "catatan": "Pembunuhan berencana (curas)"
+  },
+  {
+    "baru": 461,
+    "lama": [
+      341
+    ],
+    "catatan": "Penculikan → penganiayaan/mati"
+  },
+  {
+    "baru": 462,
+    "lama": [
+      342
+    ],
+    "catatan": "Penculikan untuk pemerasan"
+  },
+  {
+    "baru": 463,
+    "lama": [
+      343
+    ],
+    "catatan": "Penganiayaan berat"
+  },
+  {
+    "baru": 464,
+    "lama": [
+      344,
+      345
+    ],
+    "catatan": "Penganiayaan"
+  },
+  {
+    "baru": 465,
+    "lama": [
+      346
+    ],
+    "catatan": "Penganiayaan ringan"
+  },
+  {
+    "baru": 466,
+    "lama": [
+      347
+    ],
+    "catatan": "Ancaman kekerasan"
+  },
+  {
+    "baru": 467,
+    "lama": [
+      348
+    ],
+    "catatan": "Perawatan/penelantaran"
+  },
+  {
+    "baru": 468,
+    "lama": [
+      349
+    ],
+    "catatan": "Aborsi"
+  },
+  {
+    "baru": 477,
+    "lama": [
+      362
+    ],
+    "catatan": "Pencurian"
+  },
+  {
+    "baru": 478,
+    "lama": [
+      363
+    ],
+    "catatan": "Pencurian dengan kekerasan/ancaman"
+  },
+  {
+    "baru": 479,
+    "lama": [
+      365
+    ],
+    "catatan": "Pencurian dengan pemberatan"
+  },
+  {
+    "baru": 480,
+    "lama": [
+      366
+    ],
+    "catatan": "Pencurian oleh pegawai"
+  },
+  {
+    "baru": 481,
+    "lama": [
+      367
+    ],
+    "catatan": "Pencurian kendaraan bermotor"
+  },
+  {
+    "baru": 482,
+    "lama": [
+      368
+    ],
+    "catatan": "Penipuan"
+  },
+  {
+    "baru": 483,
+    "lama": [
+      378
+    ],
+    "catatan": "Penggelapan"
+  },
+  {
+    "baru": 484,
+    "lama": [
+      372
+    ],
+    "catatan": "Pemalsuan surat"
+  },
+  {
+    "baru": 485,
+    "lama": [
+      374
+    ],
+    "catatan": "Pemalsuan uang"
+  },
+  {
+    "baru": 486,
+    "lama": [
+      379
+    ],
+    "catatan": "Perusakan"
+  },
+  {
+    "baru": 487,
+    "lama": [
+      380
+    ],
+    "catatan": "Pencurian dengan ancaman"
+  },
+  {
+    "baru": 488,
+    "lama": [
+      381
+    ],
+    "catatan": "Perampokan"
+  },
+  {
+    "baru": 489,
+    "lama": [
+      382
+    ],
+    "catatan": "Pemerasan"
+  },
+  {
+    "baru": 490,
+    "lama": [
+      383
+    ],
+    "catatan": "Pemerasan dengan ancaman"
+  },
+  {
+    "baru": 491,
+    "lama": [
+      384
+    ],
+    "catatan": "Pemerasan berat"
+  },
+  {
+    "baru": 492,
+    "lama": [
+      385
+    ],
+    "catatan": "Pemerasan premanisme"
+  },
+  {
+    "baru": 493,
+    "lama": [
+      386
+    ],
+    "catatan": "Pemerasan kolektif"
+  },
+  {
+    "baru": 494,
+    "lama": [
+      387
+    ],
+    "catatan": "Pemerasan dengan kekerasan"
+  },
+  {
+    "baru": 495,
+    "lama": [
+      388
+    ],
+    "catatan": "Pemerasan dengan ancaman mati/berat"
+  },
+  {
+    "baru": 496,
+    "lama": [
+      389
+    ],
+    "catatan": "Penipuan"
+  },
+  {
+    "baru": 497,
+    "lama": [
+      390
+    ],
+    "catatan": "Penipuan berat"
+  },
+  {
+    "baru": 498,
+    "lama": [
+      391
+    ],
+    "catatan": "Penggelapan"
+  },
+  {
+    "baru": 499,
+    "lama": [
+      392
+    ],
+    "catatan": "Penggelapan berat"
+  },
+  {
+    "baru": 500,
+    "lama": [
+      393
+    ],
+    "catatan": "Perusakan"
+  },
+  {
+    "baru": 501,
+    "lama": [
+      394
+    ],
+    "catatan": "Perusakan berat"
+  },
+  {
+    "baru": 502,
+    "lama": [
+      395
+    ],
+    "catatan": "Pemalsuan dokumen"
+  },
+  {
+    "baru": 503,
+    "lama": [
+      396
+    ],
+    "catatan": "Pemalsuan surat"
+  },
+  {
+    "baru": 504,
+    "lama": [
+      397
+    ],
+    "catatan": "Pemalsuan surat berat"
+  },
+  {
+    "baru": 505,
+    "lama": [
+      398
+    ],
+    "catatan": "Pemalsuan surat keterangan"
+  },
+  {
+    "baru": 506,
+    "lama": [
+      399
+    ],
+    "catatan": "Pemalsuan tanda tangan"
+  },
+  {
+    "baru": 507,
+    "lama": [
+      400
+    ],
+    "catatan": "Pemalsuan cap negara"
+  },
+  {
+    "baru": 508,
+    "lama": [
+      401
+    ],
+    "catatan": "Pemalsuan cap negara berat"
+  },
+  {
+    "baru": 414,
+    "lama": [
+      281
+    ],
+    "catatan": "Perzinahan"
+  },
+  {
+    "baru": 415,
+    "lama": [
+      282
+    ],
+    "catatan": "Pencabulan"
+  },
+  {
+    "baru": 416,
+    "lama": [
+      283
+    ],
+    "catatan": "Pencabulan anak"
+  },
+  {
+    "baru": 417,
+    "lama": [
+      284
+    ],
+    "catatan": "Pemerkosaan"
+  },
+  {
+    "baru": 418,
+    "lama": [
+      285
+    ],
+    "catatan": "Pemerkosaan berat"
+  },
+  {
+    "baru": 351,
+    "lama": [
+      170
+    ],
+    "catatan": "Perusakan ketertiban umum"
+  },
+  {
+    "baru": 352,
+    "lama": [
+      171
+    ],
+    "catatan": "Pengeroyokan"
+  },
+  {
+    "baru": 353,
+    "lama": [
+      174
+    ],
+    "catatan": "Penganiayaan berat"
+  },
+  {
+    "baru": 523,
+    "lama": [
+      123,
+      124,
+      125
+    ],
+    "catatan": "Suap-menyuap"
+  },
+  {
+    "baru": 524,
+    "lama": [
+      126
+    ],
+    "catatan": "Suap aktif"
+  },
+  {
+    "baru": 525,
+    "lama": [
+      127
+    ],
+    "catatan": "Suap pasif"
+  },
+  {
+    "baru": 526,
+    "lama": [
+      128
+    ],
+    "catatan": "Gratifikasi"
+  },
+  {
+    "baru": 532,
+    "lama": [],
+    "catatan": "Narkotika"
+  }
+]
