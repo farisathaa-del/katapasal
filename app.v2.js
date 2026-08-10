@@ -3,17 +3,30 @@
 const SUB = '/katapasal';
 const PASAL_URL = SUB + '/data/pasal.json';
 const SW_URL = SUB + '/sw.js';
-const CACHE = 'katapasal-v2';
+const CACHE = 'katapasal-v3';
+const PAGE = 30; // ponytail: items per page, bump if user wants more
 
-let PASAL = [], BOOKMARK = [];
+let PASAL = [], BOOKMARK = [], FILTERED = [];
+let shown = 0;
 const qs = q => document.querySelector(q);
 const qsa = q => document.querySelectorAll(q);
-const esc = s => (s||'').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]);
+const esc = s => (s||'').replace(/[&<>\"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'})[c]);
 
 function bmKey(e){ return e.source + '|' + e.pasal; }
 function loadBm(){ try { return JSON.parse(localStorage.getItem('kb')||'[]'); } catch { return []; } }
 function saveBm(){ localStorage.setItem('kb', JSON.stringify(BOOKMARK)); }
 const activeF = () => qsa('.filter-btn.active')[0]?.dataset.filter || 'all';
+
+function cardHTML(e){
+  const k = bmKey(e), fav = BOOKMARK.includes(k);
+  const full = esc(e.txt||'');
+  const short = full.length > 300 ? full.slice(0,300) + '…' : full;
+  const needsExpand = full.length > 300;
+  return '<div class="card" data-key="' + esc(k) + '"><h3>' + e.source + ' — Pasal ' + e.pasal + '</h3>' +
+    '<p class="card-text">' + (needsExpand ? '<span class="trunc">' + short + '</span><span class="full" hidden>' + full + '</span>' : full) + '</p>' +
+    (needsExpand ? '<button class="expand-btn" data-key="' + esc(k) + '">Selengkapnya ▾</button>' : '') +
+    '<button class="bm-btn ' + (fav?'on':'') + '" data-key="' + esc(k) + '">' + (fav?'⭐':'🔖') + '</button></div>';
+}
 
 function render(kw='', filter='all'){
   let out = PASAL;
@@ -21,23 +34,29 @@ function render(kw='', filter='all'){
   if (filter === 'bookmarks') out = out.filter(e => BOOKMARK.includes(bmKey(e)));
   if (kw) out = out.filter(e => (e.txt||'').toLowerCase().includes(kw) || String(e.pasal).includes(kw));
 
+  FILTERED = out;
+  shown = 0;
   const rc = qs('#results');
   if (!out.length){
     rc.innerHTML = '<p class="empty">' + (filter==='bookmarks'?'🔖 Belum ada bookmark.':'Tidak ditemukan.') + '</p>';
+    qs('#load-more').hidden = true;
     updateBadge();
     return;
   }
-  rc.innerHTML = out.map(e => {
-    const k = bmKey(e), fav = BOOKMARK.includes(k);
-    const full = esc(e.txt||'');
-    const short = full.length > 300 ? full.slice(0,300) + '…' : full;
-    const needsExpand = full.length > 300;
-    return '<div class="card" data-key="' + esc(k) + '"><h3>' + e.source + ' — Pasal ' + e.pasal + '</h3>' +
-      '<p class="card-text">' + (needsExpand ? '<span class="trunc">' + short + '</span><span class="full" hidden>' + full + '</span>' : full) + '</p>' +
-      (needsExpand ? '<button class="expand-btn" data-key="' + esc(k) + '">Selengkapnya ▾</button>' : '') +
-      '<button class="bm-btn ' + (fav?'on':'') + '" data-key="' + esc(k) + '">' + (fav?'⭐':'🔖') + '</button></div>';
-  }).join('');
+  showMore();
   updateBadge();
+}
+
+function showMore(){
+  const rc = qs('#results');
+  const batch = FILTERED.slice(shown, shown + PAGE);
+  if (shown === 0) rc.innerHTML = '';
+  rc.insertAdjacentHTML('beforeend', batch.map(cardHTML).join(''));
+  shown += batch.length;
+  qs('#load-more').hidden = shown >= FILTERED.length;
+  if (FILTERED.length > PAGE) {
+    qs('#load-more').textContent = 'Muat lagi (' + shown + '/' + FILTERED.length + ')';
+  }
 }
 
 function updateBadge(){
@@ -47,9 +66,8 @@ function updateBadge(){
   bc.innerHTML = n ? '<sup>'+n+'</sup>' : '';
 }
 
-// event delegation for bookmark buttons
+// event delegation for bookmark + expand
 document.addEventListener('click', e => {
-  // expand/collapse
   const exp = e.target.closest('.expand-btn');
   if (exp) {
     const card = exp.closest('.card');
@@ -89,6 +107,9 @@ qs('#export-btn').addEventListener('click', () => {
   a.download = 'katapasal-bookmark.json';
   a.click();
 });
+
+// load more
+qs('#load-more').addEventListener('click', showMore);
 
 // search
 qs('#q').addEventListener('input', function(){
