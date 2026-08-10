@@ -39,6 +39,12 @@ a{color:var(--primary);text-decoration:none}
 .hero-search button{padding:.75rem 1.75rem;border:none;border-radius:var(--radius-pill);background:var(--primary);color:#fff;font:700 1rem/1 'Plus Jakarta Sans',sans-serif;cursor:pointer;box-shadow:3px 3px 8px rgba(99,102,241,.3),-2px -2px 6px rgba(255,255,255,.4)}
 .hero-search button:active{box-shadow:var(--shadow-pressed)}
 
+/* Filter buttons */
+.filter-bar{display:flex;flex-wrap:wrap;gap:.4rem;padding:.75rem 1rem;max-width:700px;margin:0 auto}
+.filter-btn{background:#fff;border:1px solid #d1d5db;border-radius:var(--radius-pill);padding:.45rem .85rem;font:500 .78rem 'Plus Jakarta Sans',sans-serif;color:#1e293b;cursor:pointer;transition:all .15s}
+.filter-btn:hover{border-color:var(--primary);color:var(--primary)}
+.filter-btn.active{background:var(--primary);color:#fff;border-color:var(--primary)}
+
 /* Kategori cards */
 .kat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;max-width:700px;margin:0 auto;padding:0 1rem}
 .kat-card{cursor:pointer;text-align:center}
