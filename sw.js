@@ -1,21 +1,20 @@
-// KataPasal SW — precache statis di subfolder GitHub Pages
-const CACHE = 'katapasal-v1';
-// Semua aset resolusi relatif — SW auto ikut base URL /katapasal/
+// KataPasal SW — offline cache
+const CACHE = 'katapasal-v2';
+const BASE = '/katapasal';
 const ASSETS = [
-  './',
-  './index.html',
-  './style.css',
-  './app.js',
-  './manifest.json',
-  './icons/icon-192.png',
-  './icons/icon-512.png',
-  './icons/katapasal-logo.png',
-  './data/pasal.json',
-  './sw.js'
+  BASE + '/',
+  BASE + '/index.html',
+  BASE + '/style.css',
+  BASE + '/app.js',
+  BASE + '/manifest.json',
+  BASE + '/icons/icon-192.png',
+  BASE + '/icons/icon-512.png',
+  BASE + '/icons/katapasal-logo.png',
+  BASE + '/data/pasal.json'
 ];
-self.addEventListener('install', e=>{
-  e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)));
+self.addEventListener('install', e => {
+  e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)));
 });
-self.addEventListener('fetch', e=>{
-  e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request)));
+self.addEventListener('fetch', e => {
+  e.respondWith(caches.match(e.request).then(r => r || fetch(e.request)));
 });

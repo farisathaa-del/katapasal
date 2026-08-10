@@ -5,61 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KataPasal — Bank Pasal Hukum Pidana</title>
   <meta name="description" content="Cari pasal KUHP baru, KUHAP baru, dan UU Penyesuaian Pidana. Berlaku 2 Jan 2026." />
-  <link rel="manifest" href="./manifest.json" />
+  <link rel="manifest" href="/katapasal/manifest.json" />
   <meta name="theme-color" content="#000000" />
-  <base href="/katapasal/">
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <link rel="apple-touch-icon" href="./icons/icon-192.png" />
-  <link rel="stylesheet" href="./style.css" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <link rel="apple-touch-icon" href="/katapasal/icons/icon-192.png" />
+  <link rel="stylesheet" href="/katapasal/style.css" />
 </head>
 <body>
   <header class="header">
-    <div class="logo-wrap">
-      <img src="/icons/katapasal-logo.png" alt="KataPasal" class="logo" />
+    <img src="/katapasal/icons/katapasal-logo.png" alt="KataPasal" class="logo-img" />
+    <div>
+      <h1>BANK PASAL</h1>
+      <p>KUHP · KUHAP · Penyesuaian 2026</p>
     </div>
-    <h1>BANK PASAL</h1>
-    <p class="subtitle">KUHP · KUHAP · Penyesuaian 2026</p>
   </header>
 
-  <main class="main">
-    <section class="search-bar">
-      <input type="search" id="q" placeholder="Cari pasal / kata kunci (mis: pencurian, penahanan, denda kategori)…" autocomplete="off" />
-      <button id="clear" hidden>✕</button>
-    </section>
+  <main>
+    <input id="q" type="search" placeholder="Cari pasal / kata kunci (mis: pencurian, penahanan, denda kategori)..." autocomplete="off" />
+    <button id="clear" hidden>✕</button>
 
     <div class="filters">
-      <button class="filter-btn active" data-filter="all">Semua</button>
+      <button class="filter-btn" data-filter="all">Semua</button>
       <button class="filter-btn" data-filter="KUHAP 2025">KUHAP Baru</button>
       <button class="filter-btn" data-filter="KUHAP 1981">KUHAP Lama</button>
       <button class="filter-btn" data-filter="KUHP 2023">KUHP Baru</button>
       <button class="filter-btn" data-filter="Penyesuaian 2026">Penyesuaian</button>
-      <button class="filter-btn" data-filter="Kategori Denda">Denda/Kategori</button>
+      <button class="filter-btn" data-filter="Denda">Denda/Kategori</button>
     </div>
 
-    <section class="results" id="results">
-      <p class="empty">Ketik di atas untuk mencari pasal…</p>
-    </section>
+    <div id="results"></div>
   </main>
 
   <nav class="bottom-nav">
-      <button id="bookmarks-btn" class="nav-btn">🔖<span id="bm-count"></span></button>
-      <button id="export-btn" class="nav-btn">📤</button>
+    <button id="bookmarks-btn" class="nav-btn">🔖<span id="bm-count"></span></button>
+    <button id="export-btn" class="nav-btn">📤</button>
   </nav>
 
   <!-- Bookmark panel -->
-  <div id="bookmark-panel">
-    <div class="bookmark-sheet">
+  <div id="bookmark-panel" class="b-panel">
+    <div class="b-sheet">
       <div class="b-sheet-head">
         <h2>🔖 Bookmark (<span id="bm-total">0</span>)</h2>
-        <button id="close-bm" class="nav-btn" style="background:none;color:#aaa">✕</button>
+        <button id="close-bm">✕</button>
       </div>
-      <div class="bookmark-list" id="bm-list">
-        <p class="empty bookmark-empty">Belum ada pasal disukai.</p>
-      </div>
+      <div id="bm-results"></div>
     </div>
   </div>
 
-  <script src="./app.js" type="module"></script>
+  <script src="/katapasal/app.js"></script>
 </body>
 </html>
