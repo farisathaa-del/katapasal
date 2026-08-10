@@ -3,8 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Expires" content="0" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KataPasal — Bank Pasal Hukum Pidana</title>
   <meta name="description" content="Cari pasal KUHP baru, KUHAP baru, dan UU Penyesuaian Pidana. Berlaku 2 Jan 2026." />
@@ -19,14 +17,23 @@
     <img src="/katapasal/icons/katapasal-logo.png" alt="KataPasal" class="logo-img" />
     <div>
       <h1>BANK PASAL</h1>
-      <p>KUHP · KUHAP · Penyesuaian 2026</p>
+      <p class="subtitle">KUHP · KUHAP · Penyesuaian 2026</p>
     </div>
   </header>
 
+  <!-- View tabs -->
+  <div class="view-tabs">
+    <button class="vt active" data-view="list">📋 Semua Pasal</button>
+    <button class="vt" data-view="bab">📖 Navigasi BAB</button>
+  </div>
+
   <main>
-    <div class="search-bar"><input id="q" type="search" placeholder="Cari pasal / kata kunci (mis: pencurian, penahanan, denda kategori)..." autocomplete="off" /><button id="clear" hidden>✕</button></div>
+    <!-- Search bar (list view only) -->
+    <div class="search-bar"><input id="q" type="search" placeholder="Cari pasal / kata kunci (mis: 477, pencurian...)" autocomplete="off" /><button id="clear" hidden>✕</button></div>
+
+    <!-- Filters (list view only) -->
     <div class="filters">
-      <button class="filter-btn" data-filter="all">Semua</button>
+      <button class="filter-btn active" data-filter="all">Semua</button>
       <button class="filter-btn" data-filter="KUHAP 2025">KUHAP Baru</button>
       <button class="filter-btn" data-filter="KUHAP 1981">KUHAP Lama</button>
       <button class="filter-btn" data-filter="KUHP 2023">KUHP Baru</button>
@@ -34,10 +41,20 @@
       <button class="filter-btn" data-filter="Penyesuaian 2026 Pasal VII">Penyesuaian</button>
       <button class="filter-btn" data-filter="Kategori Denda">Denda/Kategori</button>
     </div>
+
+    <!-- Direct search result (shown when number typed) -->
+    <div id="direct-hit" class="direct-hit" hidden></div>
+
+    <!-- List view -->
     <div id="list-view">
       <div id="results"></div>
       <button id="load-more" class="filter-btn" style="margin:16px auto;display:block" hidden>Muat lagi</button>
     </div>
+
+    <!-- BAB accordion view -->
+    <div id="bab-view" hidden></div>
+
+    <!-- Detail view -->
     <div id="detail-view" hidden></div>
   </main>
 
@@ -45,9 +62,11 @@
     Referensi edukatif. Bukan pengganti konsultasi hukum. Verifikasi teks resmi di <a href="https://peraturan.bpk.go.id" target="_blank">JDIH BPK</a>.
   </footer>
 
+  <!-- Bottom nav tabs -->
   <nav class="bottom-nav">
-    <button id="bookmarks-btn" class="nav-btn">🔖<span id="bm-count"></span></button>
-    <button id="export-btn" class="nav-btn">📤</button>
+    <button class="nav-btn active" data-tab="list">🔍<span>Cari</span></button>
+    <button class="nav-btn" data-tab="bab">📖<span>BAB</span></button>
+    <button class="nav-btn" data-tab="bm">🔖<span>Bookmark</span></button>
   </nav>
 
   <!-- Bookmark panel -->
