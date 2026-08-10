@@ -269,7 +269,7 @@ function setTab(tab){
   $$('.bn-btn').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));
   if(tab==='bab'){location.hash='#/bab'}
   else if(tab==='bm')openBM();
-  else if(tab==='home')location.hash='#/';
+  else if(tab==='home')location.hash='#/search';
 }
 
 // Events
