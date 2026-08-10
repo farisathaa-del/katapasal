@@ -1,6 +1,6 @@
 // Kamus Pasal SW — offline cache (no index.html — always fresh)
 const CACHE='katapasal-v6',BASE='/katapasal';
-const ASSETS=[BASE+'/style.css',BASE+'/app.v5.js',BASE+'/manifest.json',
+const ASSETS=[BASE+'/style.css',BASE+'/app.v6.js',BASE+'/manifest.json',
   BASE+'/icons/icon-192.png',BASE+'/icons/icon-512.png',BASE+'/icons/katapasal-logo.png',BASE+'/data/pasal.json'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)));self.skipWaiting()});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==CACHE).map(k=>caches.delete(k)))));self.clients.claim()});
